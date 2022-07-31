@@ -1,4 +1,4 @@
-# `angularjs-notes` — Simple CRUD operation for in AngularJS app.
+# `angularjs-notes` — Simple CRUD operation in AngularJS app.
 
 The project contains a sample AngularJS (Notes CRUD) application and is preconfigured to install the AngularJS
 framework.
