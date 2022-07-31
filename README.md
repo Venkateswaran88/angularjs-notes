@@ -1,25 +1,29 @@
-# `angular-seed` — the seed for AngularJS apps
+# `angularjs-notes` — Simple CRUD operation for in AngularJS apps.
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
-
-The seed contains a sample AngularJS application and is preconfigured to install the AngularJS
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
+The project contains a sample AngularJS (Notes CRUD) application and is preconfigured to install the AngularJS
+framework.
 
 ## Getting Started
 
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+To get you started you can simply clone the `angularjs-notes` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
+You need git to clone the `angularjs-notes` repository. You can get git from [here][git].
 
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
+We also use a number of Node.js tools to initialize and test `angularjs-notes`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
+### Clone `angularjs-notes`
+
+Clone the `angularjs-notes` repository using git:
+
+```
+git clone https://github.com/Venkateswaran88/angularjs-notes.git
+cd angularjs-notes
+```
+
+### Install Dependencies
 
 
 [angularjs]: https://angularjs.org/
@@ -29,7 +33,7 @@ and its package manager (npm) installed. You can get them from [here][node].
 [jdk]: https://wikipedia.org/wiki/Java_Development_Kit
 [jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
 [karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/index.html
+[local-app-url]: http://localhost:8000/login.html
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
 [protractor]: http://www.protractortest.org/
