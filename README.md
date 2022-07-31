@@ -72,19 +72,22 @@ Then you can start your own development web server to serve static files from an
 http-server -a localhost -p 8000
 ```
 
-Now browse to the app at [`localhost:8000/login.html`][local-app-url].
+Now browse to the app at [`localhost:8000`][local-app-url].
+
+### Login Credential
+
+```
+User Name: admin
+Password: admin
+```
+
 
 [angularjs]: https://angularjs.org/
 [git]: https://git-scm.com/
 [http-server]: https://github.com/indexzero/http-server
 [jasmine]: https://jasmine.github.io/
-[jdk]: https://wikipedia.org/wiki/Java_Development_Kit
-[jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
 [karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/login.html
+[local-app-url]: http://localhost:8000
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
 [protractor]: http://www.protractortest.org/
-[selenium]: http://docs.seleniumhq.org/
-[travis]: https://travis-ci.org/
-[travis-docs]: https://docs.travis-ci.com/user/getting-started
