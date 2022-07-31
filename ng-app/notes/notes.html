@@ -1,0 +1,63 @@
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Notes</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">New Menu</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" ng-model="vm.searchText" class="form-control form-control-dark" placeholder="Search Notes..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" ng-click="vm.logout()" class="btn btn-outline-light me-2">Logout</button>
+        </div>
+      </div>
+    </div>
+</header>
+
+<div class="row notes">
+    <div class="col-4" style="padding-left: 25px;">
+        <form id="login-form" name="vm.noteForm" class="form card" novalidate="">
+            <div class="form-group">
+                <label for="title" class="text-info">Title: <span class="text-danger">*</span></label><br>
+                <input type="text" name="title" id="title" class="form-control" ng-model="vm.form.title" required>
+                <span class="text-danger" ng-show="vm.noteForm.title.$touched && vm.noteForm.title.$invalid">Please enter title</span>
+            </div>
+            <div class="form-group">
+                <label for="body" class="text-info">Body: <span class="text-danger">*</span></label>
+                <textarea name="body" id="body" class="form-control" ng-model="vm.form.body" required></textarea>
+                <span class="text-danger" ng-show="vm.noteForm.body.$touched && vm.noteForm.body.$invalid">Please enter body.</span>
+            </div>
+            <div class="form-group">
+                <input ng-if="!vm.editMode" type="submit" name="submit" ng-disabled="vm.noteForm.$invalid" class="btn btn-info btn-md" value="Add" ng-click="vm.addNote()">
+                <input ng-if="vm.editMode" type="submit" name="submit" ng-disabled="vm.noteForm.$invalid" class="btn btn-info btn-md" value="Update" ng-click="vm.updateNote()">
+                <input ng-if="vm.editMode" type="submit" name="submit"class="btn btn-info btn-md" value="Cancel" ng-click="vm.cancel()">
+            </div>
+        </form>
+    </div>
+    <div class="col-8">
+        <div class="row row-cols-1 row-cols-md-3 g-4 p-3">
+            <div class="col" ng-repeat="note in vm.notes | filter:vm.searchText" ng-if="vm.notes.length">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ note.title }}</h5>
+                  <p class="card-text">
+                    {{ note.body }}
+                  </p>
+                  <button type="button" ng-click="vm.deleteNote($index)" class="btn-close" aria-label="Close"></button>
+                  <button type="button" ng-click="vm.editNote($index)" class="edit-icon btn btn-default btn-sm">
+                    <span class="glyphicon">&#x270f;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col" ng-if="vm.notes.length <= 0">
+                <div class="alert alert-danger">
+                  No Notes Found
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

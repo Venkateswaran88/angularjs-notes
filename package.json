@@ -1,0 +1,24 @@
+{
+  "name": "angularjs-notes",
+  "private": true,
+  "version": "1",
+  "description": "Notes in AngularJS",
+  "repository": "https://github.com/",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-cookies": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "bootstrap": "^5.2.0",
+    "gulp-angular-templatecache": "^3.0.1",
+    "gulp-cleanhtml": "^1.0.3",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "sass": "^1.54.0"
+  },
+  "devDependencies": {
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0"
+  }
+}

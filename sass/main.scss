@@ -1,0 +1,109 @@
+$background_color: #17a2b8;
+$box_background: #EAEAEA;
+$box_border_color: #9C9C9C;
+$box_width: 600px;
+$box_height: 320px;
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+#login {
+	.container {
+		#login-row {
+			#login-column {
+				#login-box {
+					margin-top: 120px;
+					max-width: $box_width;
+					min-height: $box_height;
+					border: 1px solid $box_border_color;
+                    background-color: $box_background;
+                    
+					#login-form {
+						padding: 20px;
+					}
+				}
+			}
+		}
+    }
+    background-color: $background_color;
+    height: 100vh;
+}
+
+#login-form {
+    &.card {
+        margin-top: 15px;
+        max-width: $box_width;
+		min-height: $box_height;
+        border: 1px solid $box_border_color;
+        background-color: $box_background;
+        padding: 10px;
+    }
+}
+
+.form-group {
+    padding: 5px 0px;
+}
+
+.alert-danger {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.btn {
+	&:disabled {
+		opacity: 0.3;
+	}
+}
+
+.notes {
+    height: 100vh;
+}
+
+.col {
+    .card {
+        background-color: rgba(13,202,240) !important;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    font-size: 12px;
+}
+
+.edit-icon {
+    &.btn {
+        &:hover {
+            border-color: transparent;
+        }
+        &:active {
+            border-color: transparent;
+        }
+    }
+    &.btn-check {
+        &:active+.btn {
+            border-color: transparent;
+        }
+        &:checked+.btn {
+            border-color: transparent;
+        }
+    }
+    &.btn.active {
+        border-color: transparent;
+    }
+    &.btn.show {
+        border-color: transparent;
+    }
+}
+
